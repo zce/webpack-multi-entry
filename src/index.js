@@ -1,10 +1,12 @@
-import fetchApi from './fetch'
-import './global.css'
+import fetchApi from './common/fetch'
+import './common/global.css'
 import './index.css'
 
 const mainElement = document.querySelector('.main')
 
 fetchApi('/posts').then(data => {
+  mainElement.innerHTML = '' // remove loading
+
   data.forEach(item => {
     const article = document.createElement('article')
     article.className = 'post'

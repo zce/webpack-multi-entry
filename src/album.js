@@ -1,10 +1,12 @@
-import fetchApi from './fetch'
-import './global.css'
+import fetchApi from './common/fetch'
+import './common/global.css'
 import './album.css'
 
 const mainElement = document.querySelector('.main')
 
 fetchApi('/photos?albumId=1').then(data => {
+  mainElement.innerHTML = '' // remove loading
+
   data.forEach(item => {
     const section = document.createElement('section')
     section.className = 'photo'

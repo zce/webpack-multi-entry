@@ -19,6 +19,15 @@ body  {
   font-size: 30px;
 }
 
+.loading {
+  display: block;
+  margin: 100px auto;
+}
+
+.loading path {
+  fill: #495057;
+  animation: fade 0.8s steps(8) infinite;
+}
 
 .nav ul {
   display: flex;
@@ -39,6 +48,12 @@ body  {
 .footer {
   padding: 5px;
   border-top: 1px solid #e0e0e0;
+  font-size: 14px;
   text-align: center;
   color: #868e96;
+}
+
+@keyframes fade {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }

@@ -28,7 +28,7 @@ module.exports = {
       chunks: ['index']
     }),
     new HtmlWebpackPlugin({
-      title: 'Album · Multi Entry',
+      title: 'Multi Entry',
       template: './src/album.html',
       filename: 'album.html',
       chunks: ['album']
